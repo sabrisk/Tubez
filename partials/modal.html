@@ -1,0 +1,43 @@
+<div class="modal-header">
+	<h2 class="modal-title" id="modal-title">{{vm.modalTitle}}</h2>
+</div>
+<div class="modal-body" id="modal-body">
+	<h4>{{vm.actionMessage}}</h4>
+	<div class="scrollbar-dynamic" data-jquery-scrollbar="jqueryScrollbarOptions">
+		<table>
+			<colgroup span="{{vm.showBothStatuses() ? '2' : '1'}}" ng-show="vm.showStatus()"></colgroup>
+			<col>
+			<tr>
+				<th colspan="{{vm.showBothStatuses() ? '2' : '1'}}" scope="colgroup" ng-show="vm.showStatus()">Status</th>
+				<th rowspan="2" scope="colgroup">Video Title</th>
+			</tr>
+			<tr>
+				<th scope="col" ng-show="vm.showCopyStatus">Copy</th>
+				<th scope="col" ng-show="vm.showRemoveStatus">Remove</th>
+			</tr>
+			<tbody>
+				<tr ng-repeat="video in vm.videos">
+					<td ng-show="vm.showCopyStatus">
+						{{video.insertResponse.status}}
+					</td>
+					<td ng-show="vm.showRemoveStatus">
+						{{video.deleteResponse.status}}
+					</td>			
+					<td>
+						{{ video.snippet.title }}
+					</td>
+				</tr>
+			</tbody>
+		</table>		
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-show="vm.showExecuteButton()" ng-click="vm.execute()">{{vm.executeButtonText}}</button>
+	<button class="btn btn-primary" type="button" ng-show="vm.showCloseButton()" ng-click="vm.close()">Close</button>
+	<button class="btn btn-warning" type="button" ng-show="vm.showCancelButton()" ng-click="vm.cancel()">Cancel</button>
+</div>
+
+
+
+
+

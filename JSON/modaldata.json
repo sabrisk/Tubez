@@ -1,0 +1,44 @@
+{
+	"results": [
+		{
+			"action": "COPY",
+			"title": "Confirm selection",
+			"message": "The following videos will be COPIED to playlist \"{{ vm.destPlaylistName }}\".",
+			"executeButtonText": "COPY",
+			"showCopyStatus": true,
+			"showRemoveStatus": false
+		},
+		{
+			"action": "MOVE",
+			"title": "Confirm selection",
+			"message": "The following videos will be COPIED to playlist \"{{ vm.destPlaylistName }}\" and then REMOVED from playlist \"{{ vm.srcPlaylistName }}\".",
+			"executeButtonText": "MOVE",
+			"showCopyStatus": true,
+			"showRemoveStatus": true
+		},
+		{
+			"action": "REMOVE",
+			"title": "Confirm selection",
+			"message": "The following videos will be REMOVED from playlist \"{{ vm.srcPlaylistName }}\".",
+			"executeButtonText": "REMOVE",
+			"showCopyStatus": false,
+			"showRemoveStatus": true
+		},
+		{
+			"action": "DUPLICATES",
+			"title": "Confirm selection",
+			"message": "The following duplicate videos will be REMOVED from your playlists.",
+			"executeButtonText": "REMOVE DUPLICATES",
+			"showCopyStatus": false,
+			"showRemoveStatus": true
+		},
+		{
+			"action": "NEWDUPS",
+			"title": "Deselect duplicates",
+			"message": "The following videos already exist in playlist \"{{ vm.destPlaylistName }}\".",
+			"executeButtonText": "DESELECT VIDEOS",
+			"showCopyStatus": false,
+			"showRemoveStatus": false
+		}
+	]
+}

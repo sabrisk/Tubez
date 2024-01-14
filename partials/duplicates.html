@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="row">
+
+		<h1>Ohes noes, duplicates!</h1>
+		<p>
+			There's a bug with YouTube that sometimes allows users to add a video to the SAME playlist more than once.
+			In order for Playlist Organizer to work properly, we need to clean up those duplicates. I've gone ahead and selected all the duplicates.
+			As you can see, I've left 1 video unselected (we want to leave at least one video in every playlist.) Also, just to be clear... if the video
+			has been added to multiple playlists... those videos won't be removed from those other playlists.
+		</p>
+		<p>Make sure everything looks good below and then click 'Clean Duplicates'.</p>
+		<table ng-repeat="playlist in vm.channel.playlists | filter:{containsDuplicates:'true'}">
+			<thead>
+				<tr>
+					<th>{{playlist.snippet.title}}</th>
+				</tr>
+			</thead>		
+			<tbody>
+				<tr ng-repeat="video in playlist.videos | filter:{duplicate:'true'}  | orderVideoObjectBy:'title'">
+					<td>
+						<checkbox disabled class="chkbox" largest ng-model="video.checkboxModel"></checkbox>
+					</td>
+					<td>
+						<a href="https://www.youtube.com/watch?v={{video.snippet.resourceId.videoId}}" target="_blank"><img class="thumb" ng-src={{video.snippet.thumbnails.default.url}} src={{video.snippet.thumbnails.default.url}}></a>
+					</td>
+					<td class="title-and-tags">
+						<div class="title">
+							<span>{{video.snippet.title}}</span>
+						</div>
+						<div class="tags">
+							<span>Also in: </span>
+							<span ng-repeat="tag in video.tags">
+								<span class="tag">{{tag}}</span>
+							</span>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a class="btn" ng-click="vm.deleteDuplicates()" href="">Clean Duplicates</a>
+	</div>
+</div>

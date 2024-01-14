@@ -1,0 +1,16 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^brockkeasler\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^/?$ "http\:\/\/www\.brockkeasler\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^brockkeasler\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteRule ^ytorgv2\/?$ "http\:\/\/www\.brockkeasler\.com\/" [R=301,L]
+
+#Force www:
+RewriteCond %{HTTP_HOST} ^tubez.io [NC]
+RewriteRule ^(.*)$ http://www.tubez.io/$1 [L,R=301,NC]

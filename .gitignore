@@ -1,0 +1,7 @@
+# Ignore all JSON files in the root directory
+/*.json
+
+# Exclude the json folder
+!/json/
+
+/notes/

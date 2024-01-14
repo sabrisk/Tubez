@@ -1,0 +1,16 @@
+<!-- <h1>Home</h1> -->
+<div class="container">
+	<div class="row">
+<!-- 		<button ng-click="authenticate('google')">Sign in with Google</button>
+		<button ng-click="getToken()">Console log token</button>
+		<button ng-click="logOut()">Log Out</button> -->
+		<!-- <p class="InsideContent" id="loginRequest">Please login to your YouTube account to get started! <a href="#" id="login">Login</a></p> -->
+		<span ng-if="!vm.signedIn"><img ng-click="vm.myLogin()" src="img/login2.png"></span>
+		<span ng-if="vm.signedIn"><button ng-click="vm.getStarted()">Get Started</button></span>
+		<!-- <button ng-click="vm.getToken()">Get Token</button> -->
+		<span ng-if="vm.signedIn"><button ng-click="vm.logout()">Log out</button></span>
+	</div>
+</div>
+
+
+
