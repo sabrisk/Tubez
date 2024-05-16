@@ -9,6 +9,15 @@ Tubez is a playlist organizer for Youtube that allows you to bulk copy, move, an
 - Switch between playlists easily with the provided dropdown menu
 - Select multiple videos at once with the provided checkboxes
 
+## Usage
+
+Click the gif below to **learn more** in a video:
+
+[![Screenshot](images/tubez.gif)][youtube_demo]
+
+[youtube_demo]: https://www.youtube.com/watch?v=H2b_Ltg-k7A
+
+
 ## Where
 
 Tubez is currently being hosted on my website at:
