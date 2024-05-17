@@ -9,6 +9,17 @@ Tubez is a playlist organizer for Youtube that allows you to bulk copy, move, an
 - Switch between playlists easily with the provided dropdown menu
 - Select multiple videos at once with the provided checkboxes
 
+## Gaining Access
+
+Currently, Tubez can only be accessed by **approved testers**.
+
+If you would like to try out Tubez, email me at [rbkdevtest@gmail.com](mailto:rbkdevtest@gmail.com) along with the following information.
+
+**Please include:**
+1) "Tubez Access Request" in the subject line
+2) A brief description of who you are and why you're requesting access
+3) The email address of the Google/YouTube account you would like to organize in the body
+
 ## Usage
 
 Click the gif below to **learn more** in a video:
