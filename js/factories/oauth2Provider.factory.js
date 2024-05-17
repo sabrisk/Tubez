@@ -45,18 +45,21 @@
 
 		var vm = this;
 		var oauth2Provider = {
-			apiKey: 'AIzaSyAvCUMvJMNj7KdF4NBoLdM1NvJ_t-RZtok', //live site
-			//apiKey: 'AIzaSyCb5tM8oQdjfXFfd-kITIvcnueI8C8mxBA', //test site
+
 			authorizationEndpoint: 'https://accounts.google.com/o/oauth2/auth?',
-
-			client_id: '196826622357-h25gjdm8k7etgno50di8681an8klke8g.apps.googleusercontent.com', //live site
-			// client_id: '575084579214-6h605bu166bb4ee61ploegitnsen2r7h.apps.googleusercontent.com', //test site
-
-			//client_id: '233860177798-e98ugtt7gluuhuc0bb92v1eue2e6avs9.apps.googleusercontent.com', //test site
-			//redirect_uri: 'http://www.brockkeasler.com/ytorgv2/partials/oauth2callback.html',//test
-
+			
+			/* LIVE */
+			apiKey: 'AIzaSyBiW4rNGXfgjlxpcJSofCbyuK-JiN_yZIs',
+			client_id: '222410425059-igp6q64sathii1hp25f296vt2juvch0u.apps.googleusercontent.com',
 			redirect_uri: 'https://www.brockkeasler.com/tubez/partials/oauth2callback.html', //live
-			// redirect_uri: 'http://localhost/partials/oauth2callback.html', //test
+			/* LIVE */
+			
+			/* TEST */
+			//apiKey: 'AIzaSyCb5tM8oQdjfXFfd-kITIvcnueI8C8mxBA',
+			// client_id: '575084579214-6h605bu166bb4ee61ploegitnsen2r7h.apps.googleusercontent.com',
+			// redirect_uri: 'http://localhost/partials/oauth2callback.html',
+			/* TEST */
+
 			scope: '',
 			approval_prompt: 'auto',
 			response_type: 'token',
